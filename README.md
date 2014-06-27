@@ -1,0 +1,2 @@
+angular-semantic-ui
+===================
