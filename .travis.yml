@@ -1,0 +1,7 @@
+before_install:
+  - npm install
+  - npm install bower
+  - npm install -g karma@~0.10.0
+  - bower install
+script:
+  - gulp test
