@@ -4,18 +4,26 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
-    <meta charset="utf-8">
-    <title>ngSemantic</title>
-    <meta name="viewport" content="width=device-width" />
+  <meta charset="utf-8">
+  <title>ngSemantic</title>
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="bower_components/semantic-ui/build/packaged/css/semantic.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
-  <body ng-app="angularSemantic">
+  <body ng-app="AngularSemantic">
+  <div ng-include="'views/nav.html'"></div>
+  <div class="container">
     <div ng-view=""></div>
+  </div>
 
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../nereid-chat.js"></script>
-    <script src="app.js"></script>
-    <script src="controllers.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/semantic-ui/build/packaged/javascript/semantic.js"></script>
+  <script src="../ng-semantic-ui.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers.js"></script>
   </body>
 </html>

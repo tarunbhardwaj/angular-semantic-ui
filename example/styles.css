@@ -1,0 +1,10 @@
+body {
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  padding: 10px 20px;
+  margin: 0px auto;
+  max-width: 1000px;
+}
