@@ -1,0 +1,27 @@
+{
+  "name": "angular-semantic",
+  "version": "1.0.0",
+  "authors": [
+    "tarun.bhardwaj@openlabs.co.in"
+  ],
+  "main": "ng-semantic-ui.js",
+  "description": "Angular Semantic UI",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "semantic",
+    "ui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
