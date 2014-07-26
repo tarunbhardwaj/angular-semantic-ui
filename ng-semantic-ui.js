@@ -3,7 +3,7 @@
 angular.module('ngSemantic', [])
   .directive('modal', function () {
     return {
-      restrict: 'E',
+      restrict: 'EA',
       scope: true,
       link: function (scope, element, attr) {
         scope.modalElm = $(element).find('.ui.modal');
@@ -13,6 +13,10 @@ angular.module('ngSemantic', [])
           'closable': attr.closable || true,
         });
 
+        // Disable default click events inside actions
+        scope.modalElm.find('.actions .button')
+          .off('click.' + scope.modalElm.modal('setting', 'namespace'));
+
         scope.openModal = function () {
           scope.modalElm.modal('show');
         };
@@ -20,6 +24,12 @@ angular.module('ngSemantic', [])
         scope.closeModal = function () {
           scope.modalElm.modal('hide');
         };
+
+        scope.$on('$destroy', function() {
+          // Remove modal from DOM
+          scope.closeModal();
+          scope.modalElm.remove();
+        });
       }
     };
   })
