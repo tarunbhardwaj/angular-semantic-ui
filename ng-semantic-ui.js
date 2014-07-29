@@ -147,4 +147,19 @@ angular.module('ngSemantic', [])
         });
       }
     };
-  });
+  })
+  .directive('sidebar', function () {
+    return {
+      restrict: 'EA',
+      scope: true,
+      link: function (scope, element, attr) {
+        element.sidebar('show');
+
+        scope.$on('$destroy', function() {
+          // Remove modal from DOM
+          element.sidebar('hide');
+        });
+      }
+    };
+  })
+;
