@@ -85,6 +85,7 @@ angular.module('ngSemantic', [])
 
           searchTimeout = $timeout(function() {
             if(!scope.displayValue) {
+              scope.show = false;
               return;
             }
             // Callback to fetch results
